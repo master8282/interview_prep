@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 class Tree:
-    # Made and playing with binary three struct for interview peparation
+    # Made and playing with binary tree struct for interview peparation
     
     def __init__(self, data = None):
         self.data = data
