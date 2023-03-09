@@ -28,7 +28,7 @@ class Tree:
         return node
         
     def new(self, k):
-    # Makeing new bin tree struct from the list "k"
+    # Making new bin tree struct from the list "k"
         if k:
             node = Tree(k[0])
             k = k[1:]
@@ -48,11 +48,8 @@ class Tree:
             if c not in self.level:
                 self.level[c] = list()
             self.level[c].append(t.data)
-    
-            if t.left:
-                self.unpack(t.left, c + 1)
-            if t.right:
-                self.unpack(t.right, c + 1)
+            self.unpack(t.left, c + 1)
+            self.unpack(t.right, c + 1)
                 
     def check(self, i, node, status = False):
     # Checking if value is in tree struct    
